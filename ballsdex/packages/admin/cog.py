@@ -23,7 +23,7 @@ if TYPE_CHECKING:
 
 
 @app_commands.guilds(*settings.admin_guild_ids)
-@app_commands.default_permissions(administrator=True)
+@app_commands.checks.has_any_role(1333149568094965806)
 class Admin(commands.GroupCog):
     """
     Bot admin commands.
@@ -43,7 +43,7 @@ class Admin(commands.GroupCog):
         self.__cog_app_commands_group__.add_command(InfoGroup())
 
     @app_commands.command()
-    @app_commands.checks.has_any_role(*settings.root_role_ids)
+    @app_commands.checks.has_any_role(1333149568094965806)
     async def status(
         self,
         interaction: discord.Interaction,

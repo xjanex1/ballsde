@@ -122,7 +122,7 @@ class Balls(app_commands.Group):
         ----------
         countryball: Ball | None
             The countryball you want to spawn. Random according to rarities if not specified.
-        channel: discord.TextChannel | None
+        channel: int | None
             The channel you want to spawn the countryball in. Current channel if not specified.
         n: int
             The number of countryballs to spawn. If no countryball was specified, it's random
